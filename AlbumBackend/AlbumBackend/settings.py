@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'AlbumApi',
     'rest_framework',
+    'graphene_django',
 ]
 
 MIDDLEWARE = [
@@ -73,6 +74,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+}
+
+GRAPHENE = {
+    'SCHEMA': 'AlbumBackend.schema.schema'
 }
 
 REST_FRAMEWORK = {
